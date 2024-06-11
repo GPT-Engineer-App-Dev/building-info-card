@@ -3,6 +3,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Box, Text, VStack, Container } from "@chakra-ui/react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
 // Dummy data for Norwegian buildings and sensor data
 const buildings = [
@@ -20,11 +22,11 @@ const buildings = [
 
 // Custom icon for markers
 const customIcon = new L.Icon({
-  iconUrl: require("leaflet/dist/images/marker-icon.png"),
+  iconUrl: markerIcon,
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
-  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
+  shadowUrl: markerShadow,
   shadowSize: [41, 41],
 });
 
